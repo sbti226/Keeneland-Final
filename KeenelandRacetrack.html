@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Keeneland Racetrack</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet" />
+  <style>
+    /* Set margin/padding to fit border in box model */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Define styles on body (and all descendants) */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      color: rgb(32, 32, 32);
+      background-color: rgba(167, 152, 21, 0.384);
+    }
+
+    /* Define styles for the headings */
+    h1 {
+      font-size: 5rem;
+      font-weight: 1500;
+      margin: 10px 0;
+      padding: 0;
+      color: rgb(10, 54, 8);
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 1000;
+      margin: 0;
+      padding: 0;
+      color: rgb(10, 54, 8);
+    }
+
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 1000;
+      margin-bottom: 10px;
+      color: rgb(10, 54, 8);
+    }
+
+    /* Define styles for the paragraph */
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0 0 10px 0;
+      padding: 0;
+      color:rgb(32, 32, 32)
+    }
+
+    a:link,
+    a:visited {
+      color: rgb(10, 54, 8);
+    }
+
+    a:hover {
+      color: rgb(86, 86, 86);
+      text-decoration: none;
+    }
+
+    section {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    footer {
+      width: 80%;
+      margin: 0 auto;
+      color: rgb(100, 100, 100);
+    }
+
+    iframe {
+      border: 1px solid rgb(200, 200, 200);
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .caption {
+      font-size: 0.8rem;
+      font-weight: 400;
+      font-style: italic;
+      margin: 0;
+      padding: 0;
+      color: rgb(100, 100, 100);
+    }
+
+    .title {
+      text-align: left;
+      margin: 20px;
+    }
+
+    /* Set up a container for the two columns */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* Define styles for the left column */
+    .left-column {
+      flex-basis: 40%;
+      background-color: rgba(169, 177, 168, 0.384);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Define styles for the right column */
+    .right-column {
+      flex-basis: 55%;
+      background-color: rgba(169, 177, 168, 0.384);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* Round image corners for images inside the right-column */
+    .right-column img {
+      border-radius: 10px;
+    }
+
+    /* Media query for small screens */
+    /* For screens up to 768px, apply these rules. */
+    @media (max-width: 768px) {
+
+      /* Change to a single column layout */
+      .container {
+        flex-direction: column;
+      }
+
+      /* Set full width for both columns */
+      .left-column,
+      .right-column {
+        flex-basis: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <!-- 💡💡💡 Cesium map: paste embed code below -->
+    <iframe title="Cesium area of interest" width="100%" height="576"
+      src="https://ion.cesium.com/stories/viewer/?id=9eb3e31c-0500-4ee5-92e2-e9767c78cde2" frameborder="0"
+      allow="fullscreen" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+    </iframe>
+    <!-- 💡💡💡 Cesium map: paste embed code above -->
+    <p class="caption">Cesium story created using lidar data of Keeneland</p>
+    <div class="title">
+      <h1>Keeneland Racetrack</h1>
+      <h2>Fayette County, Kentucky</h2>
+    </div>
+    <div class="container">
+      <div class="left-column">
+        <h3>Description</h3>
+        <p>
+          Keeneland Racetrack is Kentucky's premier thoroughbred 
+          racetrack established in 1936. It is internationally known 
+          for it's world class horse racing and thoroughbred sales. It is located in western Fayette County 
+          and is about a 10 minute drive from UK's campus. People from around the country make it a point
+          to attend one of Keeneland's biannual race meets to see the impressive (and pricey) thoroughbreds,
+          talented jockeys, and even run into some celebrities. There is much to do while you are there, including
+          tailgating, betting, tons of different dining options, and of course watching the races. 
+        </p>
+        <p>
+          Personally, Keeneland is one of my favorite places to go.
+          The atmosphere is like no other, and growing up in Kentucky,
+          it is likely I'll run into some people I didn't even know were 
+          going. My favorite parts of Keeneland are tailgating and placing bets
+          (despite losing money every single time I place one). The food and atmosphere
+          are fantastic, and there is something for everyone to do.
+        </p>
+        <p>
+          The goal of my project is to create a visualization of Keeneland
+          for someone that may know nothing about it, and display knowledge
+          pertaining to skills learned in GEO 409. Never having used ArcGIS before,
+          there was a bit of a learning curve to overcome, but I picked up many skills
+          that I can carry on into my engineering career.
+        </p>
+
+        <p>
+          Visualizations created from lidar data provided by
+          <a href="https://kyfromabove.ky.gov/">KyFromAbove</a> in 
+          <a href="https://www.esri.com/en-us/arcgis/products/arcgis-desktop/overview">ArcGIS</a> and 
+          <a href="https://cesium.com/platform/cesium-ion/">Cesium Ion</a>. The second visualization
+          was uploaded to youtube to make the video easily accessible and sharable.
+        </p>
+
+        <p>
+          Web page and visualizations created by sbti226 for GEO 409, Department of
+          Geography, University of Kentucky. Spring 2023.
+        </p>
+
+
+      </div>
+      <div class="right-column">
+        <h3>Vizualizations </h3>
+        <img src="treelayout.jpg" alt="This map shows the different heights of tree canopies around Keeneland's paddock and barns." width="100%" />
+        <p class="caption">Analysis of different tree canopy heights processed with ArcGIS using KyFromAbove data.</p>
+        
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/8Qvd5vJ-GAA" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+          <p class="caption">Arial Lidar data processed with ArcGIS using KyFromAbove data</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <hr />
+    <img src="logo-color-400px.png" alt="UKy Arts and Sciences  " width="300px">
+
+  </footer>
+</body>
+
+</html>
